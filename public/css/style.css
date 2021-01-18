@@ -696,20 +696,7 @@ body::-webkit-scrollbar {
 
 @media screen and (min-width: 1200px) {
 
-    body::-webkit-scrollbar {
-        width: 2vh;   
-        background-color: transparent; 
-    }
-
-    body::-webkit-scrollbar-thumb {
-        border-radius: 50px;
-        height: 10px; 
-        background-color: blanchedalmond;
-    }
-    
-    body::-webkit-scrollbar-track {
-        background-color: transparent;
-    }
+  
 
     .skills__title {
         text-align: center;
