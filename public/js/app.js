@@ -2,6 +2,9 @@ const app = {
     
     element: {},
 
+    text: 'Je suis développeur web et je vous présente ici mes réalisations et mon savoir faire.',
+
+    typeWritterIndex: 0,
 
     init: function () {
         console.log('app.init');
@@ -11,6 +14,7 @@ const app = {
         app.element.header = document.querySelector('.header__nav');
         app.element.topbar = document.querySelector('.topbar');
         app.element.navItems = document.querySelectorAll('.header__nav__item');
+        app.element.typist = document.querySelector('.presentation__text');
         app.element.mouse = document.querySelector('.presentation__scroll');
         app.element.skillsSection = document.getElementById('skills');
         app.element.jsElt = document.querySelector('.js');
@@ -26,9 +30,10 @@ const app = {
         app.element.contactSection = document.querySelector('#contact');
         app.element.footer = document.querySelector('.footer');
         app.element.talk = document.querySelectorAll('.talk');
-        console.log(app.element.mouse);
         
+
         app.startListening();
+        app.typeWritterAnimation();
     },
 
     startListening: function () {
@@ -39,6 +44,18 @@ const app = {
         app.element.navItems.forEach(item => {
             item.addEventListener("click", app.toggleMenu);
         });
+
+    },
+
+    typeWritterAnimation: function () {
+       
+        let speed = 150;
+
+        if (app.typeWritterIndex < app.text.length) {
+            app.element.typist.innerHTML += app.text.charAt(app.typeWritterIndex);
+            app.typeWritterIndex++;
+            setTimeout(app.typeWritterAnimation, speed);
+        }
 
     },
 

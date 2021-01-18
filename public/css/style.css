@@ -8,6 +8,8 @@
 html, body {
     background-color: #0A0909;
     scroll-behavior: smooth;
+    background: linear-gradient(235deg, #0A0909, rgb(148, 135, 115));
+    background-attachment: fixed;
 }
 
 body::-webkit-scrollbar {
@@ -144,6 +146,8 @@ body::-webkit-scrollbar {
     top: 5em;
     transform: translateX(15em);
     transition: all 1.5s;
+    
+  
 }
 
 .presentation__scroll {
@@ -352,7 +356,7 @@ body::-webkit-scrollbar {
     border-radius: 30px;
     float: right;
     clear: both;
-    margin: 1.5em 0;
+    margin: 1em 0;
     line-height: 1.2em; 
     position: relative;
     transition: all 1s;
@@ -881,5 +885,15 @@ body::-webkit-scrollbar {
 
     .talk {
         font-size: 1.2em;
+    }
+
+    .talk__interlocutor {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    .talk__reply {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
     }
 }

@@ -26,27 +26,46 @@ class MainController extends AbstractController
      * @return void
      */
     public function sendMail(Request $request, \Swift_Mailer $mailer) {
-        
+         
 
-        $message = (new \Swift_Message('Contact depuis portfolio'))
-                ->setFrom($request->request->get('form__input'))
-                ->setTo('royer.maxence.dev@gmail.com')
-                ->setBody(
-                    $this->renderView(
-                        'mail/email.html.twig',
-                        [
-                            'mail' => $request->request->get('form__input'),
-                            'message' => $request->request->get('form__textarea'),
-                        ]
-                    ),
-                    'text/html'
-                );
+        if (!empty($request->request->get('form__input')) && !empty($request->request->get('form__textarea'))) {
+            
+            $message = (new \Swift_Message('Contact depuis portfolio'))
+                    ->setFrom($request->request->get('form__input'))
+                    ->setTo('royer.maxence.dev@gmail.com')
+                    ->setBody(
+                        $this->renderView(
+                            'mail/email.html.twig',
+                            [
+                                'mail' => $request->request->get('form__input'),
+                                'message' => $request->request->get('form__textarea'),
+                            ]
+                        ),
+                        'text/html'
+                    );
+    
+            $this->addFlash('success' ,  'Votre message a bien été envoyé');
+    
+            $mailer->send($message);
+    
+            return $this->redirect('/#contact');
+        } else {
 
-        $this->addFlash('success' ,  'Votre message a bien été envoyé');
+            if (empty($request->request->get('form__input')) && !empty($request->request->get('form__textarea'))) {
+                
+                $this->addFlash('success' ,  'Veuillez renseigner votre email');
 
-        $mailer->send($message);
+                return $this->redirect('/#contact');
+            }
+            
+            if (!empty($request->request->get('form__input')) && empty($request->request->get('form__textarea'))) {
+                $this->addFlash('success' ,  'Veuillez inscrire un message');
+                
+                return $this->redirect('/#contact');
+            }
+        }
 
-        return $this->redirect('/#contact');
+
         
     }
 }
