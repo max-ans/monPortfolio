@@ -274,6 +274,7 @@ body::-webkit-scrollbar {
     font-weight: bold;
     font-size: 2em;
     color: blanchedalmond;
+    font-style: italic;
 }
 
 .item__description {
@@ -546,6 +547,8 @@ body::-webkit-scrollbar {
     justify-content: space-around;
     width: 100%;
     margin-top: 1em;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 
@@ -609,7 +612,7 @@ body::-webkit-scrollbar {
 
 
     .container {
-        max-width: 1024px;
+        max-width: 1200px;
         margin: 0 auto;
     }
     
@@ -687,6 +690,10 @@ body::-webkit-scrollbar {
         width: 60%;
         transition: all 1s;
     }
+
+    .schema__items .schema__description {
+        font-size: 1.5em;
+    }
 }
 
 
@@ -709,6 +716,7 @@ body::-webkit-scrollbar {
         margin-bottom: 2em;
     }
 
+    
     .achievements__title {
         text-align: center;
         background-color: transparent;
@@ -780,6 +788,8 @@ body::-webkit-scrollbar {
         margin: 1em;
     }
 
+   
+
     .about {
         height: 50vh;
     }
@@ -811,9 +821,30 @@ body::-webkit-scrollbar {
         font-size: 2em;
     }
 
+    .presentation__title {
+        font-size: 4em;
+    }
+
+    .presentation__text {
+        font-size: 2em;
+        margin-top: 7em;
+    }
+
     .presentation__img {
         
         animation: 1s slideSmall;
         transition: all ease 1s;
+    }
+
+    .item__title {
+        font-size: 2.8em;
+    }
+
+    .item__description {
+        font-size: 1.2em;
+    }
+
+    .talk {
+        font-size: 1.2em;
     }
 }

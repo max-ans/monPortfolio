@@ -1,6 +1,5 @@
 const app = {
-
-
+    
     element: {},
 
 
@@ -106,124 +105,200 @@ const app = {
 
         if (app.element.talk[0].getBoundingClientRect().top >= 0 &&
             app.element.talk[0].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[0].classList.add('--pop');
-        
+        ) {
+            app.element.talk[0].classList.add('--pop');
+        } else {
+            app.element.talk[0].classList.remove('--pop');
+        }
 
         if (app.element.talk[1].getBoundingClientRect().top >= 0 &&
             app.element.talk[1].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[1].classList.add('--pop');
-      
+        ) {
+            app.element.talk[1].classList.add('--pop');
+        } else {
+            app.element.talk[1].classList.remove('--pop');
+        }
 
 
         if (app.element.talk[2].getBoundingClientRect().top >= 0 &&
             app.element.talk[2].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[2].classList.add('--pop');
-        
+        ) {
+            app.element.talk[2].classList.add('--pop');
+        } else {
+            app.element.talk[2].classList.remove('--pop');
+        }
 
         if (app.element.talk[3].getBoundingClientRect().top >= 0 &&
             app.element.talk[3].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[3].classList.add('--pop');
-        
+        ) {
+            app.element.talk[3].classList.add('--pop');
+        } else {
+            app.element.talk[3].classList.remove('--pop');
+        }
 
         if (app.element.talk[4].getBoundingClientRect().top >= 0 &&
             app.element.talk[4].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[4].classList.add('--pop');
-        
+        ) {
+            app.element.talk[4].classList.add('--pop');
+        } else {
+            app.element.talk[4].classList.remove('--pop');
+        }
 
         if (app.element.talk[5].getBoundingClientRect().top >= 0 &&
             app.element.talk[5].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[5].classList.add('--pop');
+        ) {
+            app.element.talk[5].classList.add('--pop');
+        } else {
+            app.element.talk[5].classList.remove('--pop');
+        }
 
         if (app.element.talk[6].getBoundingClientRect().top >= 0 &&
             app.element.talk[6].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[6].classList.add('--pop');
-        
+        ) {
+            app.element.talk[6].classList.add('--pop');
+        } else {
+            app.element.talk[6].classList.remove('--pop');
+        }
 
         if (app.element.talk[7].getBoundingClientRect().top >= 0 &&
             app.element.talk[7].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[7].classList.add('--pop');
-        
+        ) {
+            app.element.talk[7].classList.add('--pop');
+        } else {
+            app.element.talk[7].classList.remove('--pop');
+        }
 
         if (app.element.talk[8].getBoundingClientRect().top >= 0 &&
             app.element.talk[8].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[8].classList.add('--pop');
-  
+        ) {
+            app.element.talk[8].classList.add('--pop');
+        } else {
+            app.element.talk[8].classList.remove('--pop');
+        }
 
         if (app.element.talk[9].getBoundingClientRect().top >= 0 &&
             app.element.talk[9].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[9].classList.add('--pop');
-
+        ) {
+            app.element.talk[9].classList.add('--pop');
+        } else {
+            app.element.talk[9].classList.remove('--pop');
+        }
 
         if (app.element.talk[10].getBoundingClientRect().top >= 0 &&
             app.element.talk[10].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[10].classList.add('--pop');
-        
+        ) {
+            app.element.talk[10].classList.add('--pop');
+        } else {
+            app.element.talk[10].classList.remove('--pop');
+        }
 
         if (app.element.talk[11].getBoundingClientRect().top >= 0 &&
             app.element.talk[11].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[11].classList.add('--pop');
-
+        ) {
+            app.element.talk[11].classList.add('--pop');
+        } else {
+            app.element.talk[11].classList.remove('--pop');
+        }
 
         if (app.element.talk[12].getBoundingClientRect().top >= 0 &&
             app.element.talk[12].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[12].classList.add('--pop');
-        
+        ) {
+            app.element.talk[12].classList.add('--pop');
+        } else {
+            app.element.talk[12].classList.remove('--pop');
+        }
 
         if (app.element.talk[13].getBoundingClientRect().top >= 0 &&
             app.element.talk[13].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[13].classList.add('--pop');
-       
+        ) {
+            app.element.talk[13].classList.add('--pop');
+        } else {
+            app.element.talk[13].classList.remove('--pop');
+        }
 
         if (app.element.talk[14].getBoundingClientRect().top >= 0 &&
             app.element.talk[14].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[14].classList.add('--pop');
-        
+        ) {
+            app.element.talk[14].classList.add('--pop');
+        } else {
+            app.element.talk[14].classList.remove('--pop');
+        }
 
         if (app.element.talk[15].getBoundingClientRect().top >= 0 &&
             app.element.talk[15].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[15].classList.add('--pop');
-        
-        
+        ) {
+            app.element.talk[15].classList.add('--pop');
+        } else {
+            app.element.talk[15].classList.remove('--pop');
+        }
 
         if (app.element.talk[16].getBoundingClientRect().top >= 0 &&
             app.element.talk[16].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[16].classList.add('--pop');
-
+        ) {
+            app.element.talk[16].classList.add('--pop');
+        } else {
+            app.element.talk[16].classList.remove('--pop');
+        }
         if (app.element.talk[17].getBoundingClientRect().top >= 0 &&
             app.element.talk[17].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[17].classList.add('--pop');
-
+        ) {
+            app.element.talk[17].classList.add('--pop');
+        } else {
+            app.element.talk[17].classList.remove('--pop');
+        }
 
         if (app.element.talk[18].getBoundingClientRect().top >= 0 &&
             app.element.talk[18].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[18].classList.add('--pop');
+        ) {
+            app.element.talk[18].classList.add('--pop');
+        } else {
+            app.element.talk[18].classList.remove('--pop');
+        }
 
         if (app.element.talk[19].getBoundingClientRect().top >= 0 &&
             app.element.talk[19].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[19].classList.add('--pop');
+        ) {
+            app.element.talk[19].classList.add('--pop');
+        } else {
+            app.element.talk[19].classList.remove('--pop');
+        }
 
         if (app.element.talk[20].getBoundingClientRect().top >= 0 &&
             app.element.talk[20].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[20].classList.add('--pop');
+        ) {
+            app.element.talk[20].classList.add('--pop');
+        } else {
+            app.element.talk[20].classList.remove('--pop');
+        }
 
         if (app.element.talk[21].getBoundingClientRect().top >= 0 &&
             app.element.talk[21].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[21].classList.add('--pop');
+        ) {
+            app.element.talk[21].classList.add('--pop');
+        } else {
+            app.element.talk[21].classList.remove('--pop');
+        }
 
         if (app.element.talk[22].getBoundingClientRect().top >= 0 &&
             app.element.talk[22].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[22].classList.add('--pop');
-        
+        ) {
+            app.element.talk[22].classList.add('--pop');
+        } else {
+            app.element.talk[22].classList.remove('--pop');
+        }
+
         if (app.element.talk[23].getBoundingClientRect().top >= 0 &&
             app.element.talk[23].getBoundingClientRect().bottom <= window.innerHeight
-        ) app.element.talk[23].classList.add('--pop');
-        
+        ) {
+            app.element.talk[23].classList.add('--pop');
+        } else {
+            app.element.talk[23].classList.remove('--pop');
+        }
 
         
     },
 
-   
-  
+    
 }
 
 document.addEventListener("DOMContentLoaded", app.init);
