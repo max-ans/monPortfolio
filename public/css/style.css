@@ -304,7 +304,6 @@ body::-webkit-scrollbar {
 .about__talk {
     padding: 1em;
     
-    
 }
 
 .talk__interlocutor {
@@ -321,6 +320,7 @@ body::-webkit-scrollbar {
     line-height: 1.2em; 
     position: relative;
     transition: all 1s;
+    opacity: 0;
 }
 
 
@@ -356,6 +356,8 @@ body::-webkit-scrollbar {
     line-height: 1.2em;
     position: relative;
     transition: all 1s;
+    opacity: 0;
+
 }
 
 

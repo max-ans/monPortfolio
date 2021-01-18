@@ -51,6 +51,7 @@ const app = {
         app.element.contactSection = document.querySelector('#contact');
         app.element.contactForm = document.querySelector('.contact__form');
         app.element.footer = document.querySelector('.footer');
+        app.element.talk = document.querySelectorAll('.talk');
         
         app.startListening();
     },
@@ -60,7 +61,7 @@ const app = {
         app.element.headerButton.addEventListener("click", app.toggleMenu);
         app.element.window.addEventListener("resize", app.checkSize);
         app.element.window.addEventListener('scroll', app.moveUp);
-        app.element.launcherText.addEventListener('click', app.startTalk);
+        // app.element.launcherText.addEventListener('click', app.startTalk);
         app.element.contactForm.addEventListener('submit', app.handleSubmitForm);
         app.element.navItems.forEach(item => {
             item.addEventListener("click", app.toggleMenu);
@@ -128,103 +129,218 @@ const app = {
         ) app.element.scrumElt.classList.add('--slideRight');
 
 
+        if (app.element.talk[0].getBoundingClientRect().top >= 0 &&
+            app.element.talk[0].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[0].classList.add('--pop');
         
-    },
 
-    startTalk: function () {
-       
-        // cache la span "cliquez"
-        app.element.launcherText.classList.add('hide');
-        app.element.contactSection.classList.add('hide');
-        app.element.footer.classList.add('hide');
+        if (app.element.talk[1].getBoundingClientRect().top >= 0 &&
+            app.element.talk[1].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[1].classList.add('--pop');
       
-        let index = 0; // index du tableau app.data
-        let paused = false; // status de l'animation
 
-        // A interval régulier 
-        let talkingScript = window.setInterval(() => {    
 
-            // si l'animation n'est pas en pause
-            if (!paused) {
-
-                // si on est pas arriver au bout du tableau
-                if(index < app.data.length) {
-                    
-                    //On récupère l'infoBulle dernièrement placée
-                    let oldInfoBulleElt = document.querySelector('.wait');
-                   
-                    // si elle existe
-                    if (oldInfoBulleElt !== null) {
-                        //on retire le dernier enfant du bloc (rapport a la création de l'info bulle)
-                        app.element.textArea.removeChild(oldInfoBulleElt);  
-                    }
-
-                    // tu créée un paragraphe
-                    let elt = document.createElement('p');
-    
-                    // tu lui applique une classe en fonction de sa position dans le tableau (pair == interlocutor ; impair == reply)
-                    if (index % 2 === 0) {
-                        elt.classList.add('talk__interlocutor');
-                    } else {
-                        elt.classList.add('talk__reply');
-                    }
-    
-                    // tu ajoute la classe pour l'animation
-                    elt.classList.add('--pop');
-
-                    // tu définis son contenu
-                    elt.innerHTML = app.data[index];
-                        
-                    // tu l'accroche a la div correspondante
-                    app.element.textArea.insertAdjacentElement('beforeend',elt);
-
-                    //tu fais scroller l'affichage 
-                    window.scrollBy(0 , 100000000)
-                    
-                    //on passe a l'index suivant
-                    index++;
-
-                    // si on est pas arriver au bout du tableau
-                    if (index < app.data.length) {
-
-                        // on créée un petit bulle simulant le fait que la personne commence a repondre.
-                        window.setTimeout(() => {
-    
-                            let infoBulleElt = document.createElement('p');
+        if (app.element.talk[2].getBoundingClientRect().top >= 0 &&
+            app.element.talk[2].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[2].classList.add('--pop');
         
-                            if (index % 2 === 0) {
-                                infoBulleElt.classList.add('talk__interlocutor');
-                            } else {
-                                infoBulleElt.classList.add('talk__reply');
-                            }
-        
-                            infoBulleElt.classList.add('wait');
-                            infoBulleElt.addEventListener('click', stop);
-                            infoBulleElt.innerHTML = '<span class="point"></span><span class="point"></span><span class="point"></span>';
-        
-                            app.element.textArea.insertAdjacentElement('beforeend',infoBulleElt);
-                            window.scrollBy(0 , 100000000)
-    
-                        }, 1000)
-                    } else {
 
-                        app.element.contactSection.classList.remove('hide');
-                        app.element.footer.classList.remove('hide');
-                    }
-                
-                    paused = true;
-    
-                } else {
-
-                    clearInterval(talkingScript);
-                }
-            }
-        },  1);
+        if (app.element.talk[3].getBoundingClientRect().top >= 0 &&
+            app.element.talk[3].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[3].classList.add('--pop');
         
-        let stop = () => {
-            paused = !paused;
-        };
+
+        if (app.element.talk[4].getBoundingClientRect().top >= 0 &&
+            app.element.talk[4].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[4].classList.add('--pop');
+        
+
+        if (app.element.talk[5].getBoundingClientRect().top >= 0 &&
+            app.element.talk[5].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[5].classList.add('--pop');
+
+        if (app.element.talk[6].getBoundingClientRect().top >= 0 &&
+            app.element.talk[6].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[6].classList.add('--pop');
+        
+
+        if (app.element.talk[7].getBoundingClientRect().top >= 0 &&
+            app.element.talk[7].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[7].classList.add('--pop');
+        
+
+        if (app.element.talk[8].getBoundingClientRect().top >= 0 &&
+            app.element.talk[8].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[8].classList.add('--pop');
+  
+
+        if (app.element.talk[9].getBoundingClientRect().top >= 0 &&
+            app.element.talk[9].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[9].classList.add('--pop');
+
+
+        if (app.element.talk[10].getBoundingClientRect().top >= 0 &&
+            app.element.talk[10].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[10].classList.add('--pop');
+        
+
+        if (app.element.talk[11].getBoundingClientRect().top >= 0 &&
+            app.element.talk[11].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[11].classList.add('--pop');
+
+
+        if (app.element.talk[12].getBoundingClientRect().top >= 0 &&
+            app.element.talk[12].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[12].classList.add('--pop');
+        
+
+        if (app.element.talk[13].getBoundingClientRect().top >= 0 &&
+            app.element.talk[13].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[13].classList.add('--pop');
+       
+
+        if (app.element.talk[14].getBoundingClientRect().top >= 0 &&
+            app.element.talk[14].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[14].classList.add('--pop');
+        
+
+        if (app.element.talk[15].getBoundingClientRect().top >= 0 &&
+            app.element.talk[15].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[15].classList.add('--pop');
+        
+        
+
+        if (app.element.talk[16].getBoundingClientRect().top >= 0 &&
+            app.element.talk[16].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[16].classList.add('--pop');
+
+        if (app.element.talk[17].getBoundingClientRect().top >= 0 &&
+            app.element.talk[17].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[17].classList.add('--pop');
+
+
+        if (app.element.talk[18].getBoundingClientRect().top >= 0 &&
+            app.element.talk[18].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[18].classList.add('--pop');
+
+        if (app.element.talk[19].getBoundingClientRect().top >= 0 &&
+            app.element.talk[19].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[19].classList.add('--pop');
+
+        if (app.element.talk[20].getBoundingClientRect().top >= 0 &&
+            app.element.talk[20].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[20].classList.add('--pop');
+
+        if (app.element.talk[21].getBoundingClientRect().top >= 0 &&
+            app.element.talk[21].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[21].classList.add('--pop');
+
+        if (app.element.talk[22].getBoundingClientRect().top >= 0 &&
+            app.element.talk[22].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[22].classList.add('--pop');
+        
+        if (app.element.talk[23].getBoundingClientRect().top >= 0 &&
+            app.element.talk[23].getBoundingClientRect().bottom <= window.innerHeight
+        ) app.element.talk[23].classList.add('--pop');
+        
+
+        
     },
+
+    // startTalk: function () {
+       
+    //     // cache la span "cliquez"
+    //     app.element.launcherText.classList.add('hide');
+    //     app.element.contactSection.classList.add('hide');
+    //     app.element.footer.classList.add('hide');
+      
+    //     let index = 0; // index du tableau app.data
+    //     let paused = false; // status de l'animation
+
+    //     // A interval régulier 
+    //     let talkingScript = window.setInterval(() => {    
+
+    //         // si l'animation n'est pas en pause
+    //         if (!paused) {
+
+    //             // si on est pas arriver au bout du tableau
+    //             if(index < app.data.length) {
+                    
+    //                 //On récupère l'infoBulle dernièrement placée
+    //                 let oldInfoBulleElt = document.querySelector('.wait');
+                   
+    //                 // si elle existe
+    //                 if (oldInfoBulleElt !== null) {
+    //                     //on retire le dernier enfant du bloc (rapport a la création de l'info bulle)
+    //                     app.element.textArea.removeChild(oldInfoBulleElt);  
+    //                 }
+
+    //                 // tu créée un paragraphe
+    //                 let elt = document.createElement('p');
+    
+    //                 // tu lui applique une classe en fonction de sa position dans le tableau (pair == interlocutor ; impair == reply)
+    //                 if (index % 2 === 0) {
+    //                     elt.classList.add('talk__interlocutor');
+    //                 } else {
+    //                     elt.classList.add('talk__reply');
+    //                 }
+    
+    //                 // tu ajoute la classe pour l'animation
+    //                 elt.classList.add('--pop');
+
+    //                 // tu définis son contenu
+    //                 elt.innerHTML = app.data[index];
+                        
+    //                 // tu l'accroche a la div correspondante
+    //                 app.element.textArea.insertAdjacentElement('beforeend',elt);
+
+    //                 //tu fais scroller l'affichage 
+    //                 window.scrollBy(0 , 100000000)
+                    
+    //                 //on passe a l'index suivant
+    //                 index++;
+
+    //                 // si on est pas arriver au bout du tableau
+    //                 if (index < app.data.length) {
+
+    //                     // on créée un petit bulle simulant le fait que la personne commence a repondre.
+    //                     window.setTimeout(() => {
+    
+    //                         let infoBulleElt = document.createElement('p');
+        
+    //                         if (index % 2 === 0) {
+    //                             infoBulleElt.classList.add('talk__interlocutor');
+    //                         } else {
+    //                             infoBulleElt.classList.add('talk__reply');
+    //                         }
+        
+    //                         infoBulleElt.classList.add('wait');
+    //                         infoBulleElt.addEventListener('click', stop);
+    //                         infoBulleElt.innerHTML = '<span class="point"></span><span class="point"></span><span class="point"></span>';
+        
+    //                         app.element.textArea.insertAdjacentElement('beforeend',infoBulleElt);
+    //                         window.scrollBy(0 , 100000000)
+    
+    //                     }, 1000)
+    //                 } else {
+
+    //                     app.element.contactSection.classList.remove('hide');
+    //                     app.element.footer.classList.remove('hide');
+    //                 }
+                
+    //                 paused = true;
+    
+    //             } else {
+
+    //                 clearInterval(talkingScript);
+    //             }
+    //         }
+    //     },  1);
+        
+    //     let stop = () => {
+    //         paused = !paused;
+    //     };
+    // },
   
 }
 
