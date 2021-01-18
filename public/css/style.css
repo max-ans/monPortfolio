@@ -117,6 +117,7 @@ body::-webkit-scrollbar {
     height: 80vh;
     margin-top: 6em;
     transition: all 0.5s;
+    
     overflow: hidden;
 }
 
@@ -144,6 +145,40 @@ body::-webkit-scrollbar {
     transform: translateX(15em);
     transition: all 1.5s;
 }
+
+.presentation__scroll {
+    width: 20%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 2em;
+    right: 0;
+    left: 0;
+    max-width: 100px;
+}
+
+.presentation__scroll .scroll__mouse {
+    width: 25%;
+    margin: 0 auto;
+    position: relative;
+    height: 5vh;
+    border: 2px solid blanchedalmond;
+    border-radius: 35px;
+    animation: seeMe 3s infinite reverse;
+
+}
+
+.presentation__scroll .scroll__mouse .mouse__roller {
+    width: 10%;
+    height: 1vh;
+    border: 1px solid blanchedalmond;
+    margin: 6px auto;
+    border-radius: 15px;
+    background-color: blanchedalmond;
+    animation: slideScreen 3s infinite;
+    position: relative;
+}
+
+
 
 .presentation__img {
     position: absolute;

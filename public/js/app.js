@@ -11,6 +11,7 @@ const app = {
         app.element.header = document.querySelector('.header__nav');
         app.element.topbar = document.querySelector('.topbar');
         app.element.navItems = document.querySelectorAll('.header__nav__item');
+        app.element.mouse = document.querySelector('.presentation__scroll');
         app.element.skillsSection = document.getElementById('skills');
         app.element.jsElt = document.querySelector('.js');
         app.element.phpElt = document.querySelector('.php');
@@ -23,9 +24,9 @@ const app = {
         app.element.textArea = document.querySelector('.about__talk');
         app.element.launcherText = document.querySelector('.talk__launcher');
         app.element.contactSection = document.querySelector('#contact');
-        app.element.contactForm = document.querySelector('.contact__form');
         app.element.footer = document.querySelector('.footer');
         app.element.talk = document.querySelectorAll('.talk');
+        console.log(app.element.mouse);
         
         app.startListening();
     },
@@ -35,8 +36,6 @@ const app = {
         app.element.headerButton.addEventListener("click", app.toggleMenu);
         app.element.window.addEventListener("resize", app.checkSize);
         app.element.window.addEventListener('scroll', app.moveUp);
-        // app.element.launcherText.addEventListener('click', app.startTalk);
-        app.element.contactForm.addEventListener('submit', app.handleSubmitForm);
         app.element.navItems.forEach(item => {
             item.addEventListener("click", app.toggleMenu);
         });
@@ -60,14 +59,11 @@ const app = {
 
         } 
     },
-    
-    handleSubmitForm: function (evt) {
-        // evt.preventDefault();
-    },
+
 
     moveUp: function () {
-        // console.log(window.scrollY);
-        // console.log(app.element.jsElt.getBoundingClientRect());
+
+        app.element.mouse.classList.add('hide');
 
         if (app.element.jsElt.getBoundingClientRect().top >= 0 &&
             app.element.jsElt.getBoundingClientRect().bottom <= window.innerHeight 
