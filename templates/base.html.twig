@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        {% endblock %}
+        <title>{% block title %}Max-ans{% endblock %}</title>
+    </head>
+    <body>
+        <header class="header ">
+            <nav class="header__nav ">
+                <a href="#skills" class="header__nav__item">
+                    Compétences
+                </a>
+                <a href="#achievements" class="header__nav__item">
+                    Réalisations
+                </a>
+                <a href="#about" class="header__nav__item">
+                    À propos
+                </a>
+                <a href="#contact" class="header__nav__item">
+                    Contact
+                </a>
+            </nav>
+            <div class="topbar">
+                <h1 class="topbar__title ">
+                    Max-ans
+                </h1>
+                <button class="topbar__button">
+                    <img class="topbar__trigger" src="{{ asset('images/angle-down-icon_1.svg') }}" alt="">
+                </button>
+            </div>
+        </header>
+        
+        {% block body %}
+        
+        {% endblock %}
+
+        <footer class="footer">
+            <nav class="footer__nav ">
+                <a href="#skills" class="footer__nav__item">
+                    Compétences
+                </a>
+                <a href="#achievements" class="footer__nav__item">
+                    Réalisations
+                </a>
+                <a href="#about" class="footer__nav__item">
+                    À propos
+                </a>
+                <a href="#contact" class="footer__nav__item">
+                    Contact
+                </a>
+            </nav> 
+
+            <div class="footer__social">
+                <a href="https://twitter.com/max__ans" target="_blank" class="social__link">
+                    <img src="{{ asset('images/twitter-square-icon.svg') }}" alt="" class="social__link__icon">      
+                </a>
+                <a href="https://www.facebook.com/max.ans.372" target="_blank" class="social__link">
+                    <img src="{{ asset('images/facebook-square-icon.svg') }}" alt="" class="social__link__icon">  
+                </a>
+                <a href="https://github.com/max-ans" target="_blank" class="social__link">
+                    <img src="{{ asset('images/github-icon.svg') }}" alt="" class="social__link__icon">
+                </a>
+            </div>
+        </footer>
+        
+        {% block javascripts %}
+        <script src="js/app.js"></script>
+        {% endblock %}
+    </body>
+</html>

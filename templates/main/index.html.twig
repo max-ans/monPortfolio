@@ -1,0 +1,172 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<main>
+    <section class="presentation">
+        <h2 class="presentation__title">
+            Salut, moi c'est Maxence
+        </h2>
+        <p class="presentation__text">
+            Je suis développeur web et je vous présente ici mes réalisations et mon savoir faire.
+        </p>
+
+        <img src="images/face.svg" class="presentation__img" alt="">
+    </section>
+</main>
+
+<section id="skills" class="skills">
+    <h2 class="skills__title">
+        Compétences
+    </h2>
+    <div class="skills__schema container">
+
+        <div class="schema__items">
+            <img src="{{ asset('images/laptop-code-icon_1.svg') }}" class="schema__icons laptop" alt="">
+        </div>
+
+        <div class="schema__items js">
+            <p class="schema__description">
+                 Mise en place d'intéraction avec l'utilisateur 
+            </p>
+            <img src="{{ asset('images/javascript-icon_1.svg') }}" class="schema__icons " alt="">
+        </div>
+
+        <div class="schema__items php">
+            <p class="schema__description">
+                Instaurer du dynamisme dans les pages web
+            </p>
+            <img src="{{ asset('images/php-icon_2.svg') }}" class="schema__icons " alt="">
+        </div>
+
+        <div class="schema__items react">
+            <p class="schema__description">
+                Création d'interface utilisateur réactive
+            </p>
+            <img src="{{ asset('images/react-icon_2.svg') }}" class="schema__icons " alt="">
+        </div>
+
+        <div class="schema__items symfo">
+            <p class="schema__description">
+                Framework PHP MVC modulables et adaptable
+            </p>
+            <img src="{{ asset('images/symfony-icon_2.svg') }}" class="schema__icons " alt="">
+        </div>
+
+        <div class="schema__items sql">
+            <p class="schema__description">
+                Gestion des base de données relationnelles
+            </p>
+            <img src="{{ asset('images/mysql-icon_1.svg') }}" class="schema__icons " alt="">
+        </div>
+
+        <div class="schema__items git">
+            <p class="schema__description">
+                Versionning des projets web
+            </p>
+            <img src="{{ asset('images/git-icon_4.svg') }}" class="schema__icons " alt="">
+        </div>
+        <div class="schema__items linux">
+            <p class="schema__description">
+                Open source, souplesse de configuration et gratuit
+            </p>
+            <img src="{{ asset('images/linux-icon_3.svg') }}" class="schema__icons " alt="">
+        </div>
+        <div class="schema__items scrum">
+            <p class="schema__description">
+            Travail en méthode Agile
+            </p>
+            <img src="{{ asset('images/scrum-icon_1.svg') }}" class="schema__icons " alt="">
+        </div>
+    </div>
+</section>
+<section id="achievements" class="achievements">
+    <h2 class="achievements__title">
+        Réalisations
+    </h2>
+    <div class="achievements__list container">
+        <div class="list__item sorry">
+           
+                <h4 class="item__title">s'Orry</h4>
+          
+            <p class="item__description">
+                Site humoristique listant des excuses de retard 
+            </p>
+            <img class="item__img" src="{{ asset('images/sorry.png') }}" alt="">
+            <a class="item__link" target="_blank" href="http://3.219.236.7/">
+                Visiter le site dans un autre onglet
+            </a> 
+        </div>
+
+        <div class="list__item otd">
+            <a  class="item__link" target="_blank" href="http://3.219.236.7/">
+                <h4 class="item__title">O'ld the door</h4>
+            </a>
+            <p class="item__description">
+                Escape game textuel rétro 
+            </p>
+            <img class="item__img" src="{{ asset('images/otd.png') }}" alt="">
+            <a class="item__link" target="_blank" href="http://3.219.236.7/">
+                Visiter le site dans un autre onglet
+            </a>
+        </div>
+
+        <div class="list__item pass">
+            <a  class="item__link" target="_blank" href="">
+                <h4 class="item__title">Pass'Prass</h4>
+            </a>
+            <p class="item__description">
+                Porte feuille sécurisé pour documents administratifs 
+            </p>
+            <img class="item__img" src="{{ asset('images/Image-Coming-Soon-400x400.jpg') }}" alt="">
+            <a class="item__link" target="_blank" href="http://3.219.236.7/">
+                Bientôt disponible
+            </a>
+        </div>
+    </div>
+</section>
+<section id="about" class="about">
+    <h2 class="about__title">
+        À propos
+    </h2>
+    <div class="about__talk container">
+        
+        <span class="talk__launcher">
+            Cliquez
+        </span>
+        <span class="talk__tips">
+            Faites défiler la discussion en cliquant sur les bulles
+        </span>
+
+    </div>
+</section>
+<section id="contact" class="contact">
+    <h2 class="contact__title">
+        Contact
+    </h2>
+    <form class="contact__form container" action="/send" method="POST">
+        <fieldset class="form__fieldset">
+            <legend class="fieldset__legend">Un petit message ?</legend>
+
+            {% for message in app.flashes('success') %}
+                <div class="form__fieldset__flash">
+                    {{ message }}
+                </div>
+            {% endfor %}  
+
+            <label for="form__input" class="form__label">
+                Votre adresse mail :
+            </label>
+
+            <input id="form__input" class="form__input" name="form__input" type="email" required>
+
+            <label for="form__textarea" class="form__label">
+                 Votre message :
+            </label>
+            <textarea name="form__textarea" id="form__textarea" cols="30" rows="10" class="form__input"></textarea>
+
+            <button type="submit" class="form__button">envoyer</button>
+
+        </fieldset>
+      </form>
+</section>
+{% endblock %}

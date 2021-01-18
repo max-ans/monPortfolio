@@ -1,0 +1,65 @@
+@keyframes slideSmall {
+    0% {
+        right: 30em; 
+        opacity: 0;  
+        
+    }
+    
+    100% {
+        right: 0em;
+        opacity: 1;
+        
+     }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.2); 
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes seeMe {
+    0% {
+        opacity: 0.2;
+        
+    }
+
+    100% {
+        opacity: 1;
+        
+    }
+}
+
+@keyframes dots {
+    50% {
+        opacity: 0;
+        transform: scale(0.7)   translateY(10px);
+    }
+}
+
+@keyframes button3d {
+
+    0% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(0.9)  
+    }
+
+    100% {
+        transform: scale(1)  
+    }
+}
+
