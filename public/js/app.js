@@ -49,7 +49,7 @@ const app = {
 
     typeWritterAnimation: function () {
        
-        let speed = 150;
+        let speed = 100;
 
         if (app.typeWritterIndex < app.text.length) {
             app.element.typist.innerHTML += app.text.charAt(app.typeWritterIndex);
@@ -128,6 +128,7 @@ const app = {
             app.element.talk[1].getBoundingClientRect().bottom <= window.innerHeight
         ) {
             app.element.talk[1].classList.add('--pop');
+            
         } else {
             app.element.talk[1].classList.remove('--pop');
         }

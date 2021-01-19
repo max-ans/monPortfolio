@@ -598,7 +598,7 @@ body::-webkit-scrollbar {
 }
 
 .footer .footer__social .social__link .social__link__icon:hover {
-    transform: scale(1.2);
+    transform: scale(3.5) translate(0 , -0.8em);
     transition: all 0.5s;
 }
 
