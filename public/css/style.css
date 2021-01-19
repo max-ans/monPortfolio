@@ -510,7 +510,7 @@ body::-webkit-scrollbar {
     text-align: center;
     border-radius: 5px;
     font-family: 'Oswald';
-    color: dimgrey;
+    color: darkcyan;
 }
 
 .form__fieldset .fieldset__legend {
