@@ -75,7 +75,7 @@ const app = {
         app.element.mouse.classList.add('hide');
 
         app.element.skillsLogo.forEach((logo) => {
-            console.log(logo);
+            
             if(
                 logo.classList.contains('js') ||
                 logo.classList.contains('react') ||
