@@ -16,6 +16,38 @@ body::-webkit-scrollbar {
     width: 0px;   
 }
 
+.error {
+    width: 70%;
+    font-family: 'Oswald', serif;
+    margin: 12em auto;
+    transition: all 0.5s;
+
+    
+}
+.error .error__title {
+    font-size: 3em;
+    text-align: center;
+    color: blanchedalmond;
+    transition: all 0.5s;
+
+}
+
+.error .error__text {
+    text-align: center;
+    color: blanchedalmond;
+    margin-top: 3em;
+    transition: all 0.5s;
+
+}
+
+.error .error__text .error__text__link {
+    text-align: center;
+    display: block;
+    color: blanchedalmond;
+    padding: 1em;
+
+}
+
 .dimmer {
     opacity: 0.5;
     transition: all 0.5s;
@@ -743,6 +775,37 @@ body::-webkit-scrollbar {
 @media screen and (min-width: 1200px) {
 
   
+    .error {
+        width: 70%;
+        font-family: 'Oswald', serif;
+        margin: 20em auto;
+        transition: all 0.5s;
+
+    }
+
+    .error .error__title {
+        font-size: 3em;
+        text-align: center;
+        transition: all 0.5s;
+        color: blanchedalmond;
+    }
+    
+    .error .error__text {
+        text-align: center;
+        color: blanchedalmond;
+        margin-top: 3em;
+        transition: all 0.5s;
+        font-size: 2em;
+
+    }
+    
+    .error .error__text .error__text__link {
+        text-align: center;
+        display: block;
+        color: blanchedalmond;
+        padding: 1em;
+    
+    }
 
     .skills__title {
         text-align: center;

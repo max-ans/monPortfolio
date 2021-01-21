@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page non trouvée{% endblock %}
+
+{% block body %}
+<div class="error">
+
+    <h1 class="error__title">OOPS</h1>
+    
+    <p class="error__text">
+        Il semblerait qu'il y est un problème avec l'adresse demandée...
+        <br>
+        <br>
+        <br>
+        <br>
+        Vous pouvez retourner sur la page pricipale en cliquant sur le lien suivant:
+        <br><br>
+
+         <a class="error__text__link" href="{{ path('home_page') }}">Retourner sur Max-ans</a>
+    </p>
+
+</div>
+{% endblock %}
